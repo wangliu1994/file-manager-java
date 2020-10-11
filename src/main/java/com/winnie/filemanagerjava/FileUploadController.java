@@ -24,7 +24,6 @@ public class FileUploadController {
 
     /**
      * 上传图片
-     *
      */
     @PostMapping({"/upload"})
     @ApiOperation("上传")
@@ -32,5 +31,12 @@ public class FileUploadController {
                                            @RequestParam("number") String number,
                                            @RequestParam("date") Long date) {
         return Result.success(fileService.uploadFile(file, number, date));
+    }
+
+
+    @GetMapping("/test")
+    @ApiOperation("测试服务器连接")
+    public Result<Boolean> testServer() {
+        return Result.success(true);
     }
 }
