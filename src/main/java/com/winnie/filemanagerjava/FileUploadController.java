@@ -27,10 +27,11 @@ public class FileUploadController {
      */
     @PostMapping({"/upload"})
     @ApiOperation("上传")
-    public Result<FileUploadResDTO> upload(@RequestParam(name = "file") MultipartFile file,
+    public Result<FileUploadResDTO> upload(@RequestParam("file") MultipartFile file,
+                                           @RequestParam("type") Integer type,
                                            @RequestParam("number") String number,
                                            @RequestParam("date") Long date) {
-        return Result.success(fileService.uploadFile(file, number, date));
+        return Result.success(fileService.uploadFile(file, type, number,  date));
     }
 
 

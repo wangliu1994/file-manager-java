@@ -12,5 +12,5 @@ public interface FileService {
     /**
      * 文件上传基础服务
      */
-    FileUploadResDTO uploadFile(MultipartFile multipartFile, String number, Long date);
+    FileUploadResDTO uploadFile(MultipartFile multipartFile, Integer type, String number, Long date);
 }
