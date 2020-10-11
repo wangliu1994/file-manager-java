@@ -28,17 +28,14 @@ public class FileServiceImpl implements FileService {
 
         //存储路径
         Date dateTime = new Date(date);
-        String path1 = new SimpleDateFormat("yyyy", Locale.getDefault()).format(dateTime);
-        String path2 = new SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(dateTime);
-        String path3 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(dateTime);
+        String path1 = new SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(dateTime);
+        String path2 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(dateTime);
         String baseDirPath = fileBasePath
                 .concat("面单管理\\\\")
                 .concat(File.separator)
                 .concat(path1)
                 .concat(File.separator)
                 .concat(path2)
-                .concat(File.separator)
-                .concat(path3)
                 .concat(File.separator);
         if (type == 1) {
             baseDirPath = baseDirPath.concat("圆通速递").concat(File.separator);
