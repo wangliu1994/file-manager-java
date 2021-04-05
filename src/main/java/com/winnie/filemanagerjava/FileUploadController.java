@@ -31,7 +31,7 @@ public class FileUploadController {
                                            @RequestParam("type") Integer type,
                                            @RequestParam("number") String number,
                                            @RequestParam("date") Long date) {
-        return Result.success(fileService.uploadFile(file, type, number,  date));
+        return Result.success(fileService.uploadFile(file, type, number, date));
     }
 
 

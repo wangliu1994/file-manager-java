@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
     /**
      * 全局异常
+     *
      * @param e
      * @return
      */

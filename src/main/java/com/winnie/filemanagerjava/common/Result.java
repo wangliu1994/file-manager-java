@@ -28,7 +28,7 @@ public class Result<T> {
         this.errorMessage = errorMessage;
     }
 
-    public static <T> Result<T> success(T data){
+    public static <T> Result<T> success(T data) {
         return new Result<>(data);
     }
 }
